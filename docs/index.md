@@ -8,8 +8,19 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Here's a list of some important resources for getting started with hacking the SCI virtual machine.
 
+### The SCI Virtual Machine
+* [ScummVM SCI Engine](https://github.com/scummvm/scummvm/tree/master/engines/sci)
 * [SCI P-Machine instruction-set](https://wiki.scummvm.org/index.php/SCI/Specifications/SCI_virtual_machine/The_Sierra_PMachine)
 * [SCI Decompilation Archive](https://github.com/EricOakford/SCI-Decompilation-Archive)
+* [Original SCI-16 Engine](https://github.com/OmerMor/SCI16)
+* [Original SCI-32 Engine](https://github.com/OmerMor/SCI32)
+
+### Reverse Engineering Tools
+* [SCI Companion Website](http://scicompanion.com/)
+* [SCI Companion Source (not maintained)](https://github.com/icefallgames/SCICompanion)
+* [SCI Companion (maintained)](https://github.com/Kawa-oneechan/SCICompanion)
+
+### ScummVM SCI Debugger
 
 
 ### Markdown
