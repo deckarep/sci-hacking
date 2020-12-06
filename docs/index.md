@@ -1,8 +1,16 @@
-## Welcome to GitHub Pages
+## SCI Hacking
 
 You can use the [editor on GitHub](https://github.com/deckarep/sci-hacking/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### Resources
+
+Here's a list of some important resources for getting started with hacking the SCI virtual machine.
+
+* [SCI P-Machine instruction-set](https://wiki.scummvm.org/index.php/SCI/Specifications/SCI_virtual_machine/The_Sierra_PMachine)
+* [SCI Decompilation Archive](https://github.com/EricOakford/SCI-Decompilation-Archive)
+
 
 ### Markdown
 
