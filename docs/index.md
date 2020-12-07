@@ -14,7 +14,7 @@ Here's a list of some important resources for getting started with hacking the S
 * [SCI Decompilation Archive](https://github.com/EricOakford/SCI-Decompilation-Archive)
 * [Original SCI-16 Engine](https://github.com/OmerMor/SCI16)
 * [Original SCI-32 Engine](https://github.com/OmerMor/SCI32)
-
+* [SCI Programming Forum](http://sciprogramming.com/)
 
 ### Reverse Engineering Tools
 * [SCI Companion Website](http://scicompanion.com/)
@@ -23,8 +23,11 @@ Here's a list of some important resources for getting started with hacking the S
 * [SCI Companion (maintained)](https://github.com/Kawa-oneechan/SCICompanion)
 
 ### Blogs
-* Show your working Dr. Brain
-* 
+* [Show Your Working: Patching a 25yr old Sierra game](https://moral.net.au/writing/2017/09/23/sierra_bug/)
+* [Kawa Blog - SCI development](http://helmet.kafuka.org/logopending/)
+
+### Going Deeper
+* [Kawa misc tools](http://helmet.kafuka.org/sci/)
 
 ### ScummVM SCI Debugger
 
