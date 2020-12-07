@@ -28,9 +28,11 @@ Here's a list of some important resources for getting started with hacking the S
 
 ### ScummVM SCI Debugger
 
-The following debugger commands are specific to the debugger console built into the ScummVM engine.
+The following debugger commands are *specific* to the debugger console built into the `ScummVM` engine.
 
-Tip: Starting ScummVM from a terminal session allows you to view some important output that is logged to STDOUT when executing some debug commands. For serious debugging, you'll want to do this to get a richer experience when debugging.
+**Tip**: Starting `ScummVM` from a `terminal` session allows you to view some important output that is logged to `STDOUT` when executing some debug commands. For serious debugging, *you'll want to do this* to get a richer experience when debugging.
+
+Note: This list of commands is certainly not exhaustive and some commands only work on certain version of the SCI engine. Typing `help` will show all the available commands but if you get stuck [check the source code](https://github.com/scummvm/scummvm/blob/master/engines/sci/console.cpp) for a further understanding of how the debug commands work.
 
 #### Starting ScummVM for debugging
 ```sh
@@ -41,11 +43,11 @@ cd ScummVM.app/Contents/MacOS
 ./scummvm
 ```
 
+#### Open debugger console
+MacOS: `[OPTION] + [CTRL] + [SHIFT] + D`
+
 #### Common commands to know
 ```sh
-# Open debugger console:
-MacOS: [OPTION] + [CTRL] + [SHIFT] + D
-
 # Dismiss debugger console (press ESC) or:
 ) exit
 ) go
@@ -93,8 +95,8 @@ MacOS: [OPTION] + [CTRL] + [SHIFT] + D
 ) registers
 
 # Inspect the stack
-stack <depth>
-stack 10
+) stack <depth>
+) stack 10
 
 # List variables (global, local, temp, param)
 ) vmvarlist or vl
