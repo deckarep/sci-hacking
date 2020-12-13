@@ -157,6 +157,40 @@ jmp <relpos>
 ldi 0000
 ```
 
+### Example Hacks
+
+#### Leisure Suit Larry 6 Hack - Cav Easter Egg Exposed
+
+How this patch works: Since the logic for the game is located in file `440.SCR` and this resource is *not compressed*, the bytecode instruction set is available for hex-editing.
+
+In total *3 bytes* must be changed. Since two selectors are enqueued to be executed for the asset in question, we effectively need to prevent the `hide` one from running. We accomplish this by changing the instructions to use a `jmp 1` instead of `pushi 66` where `0x66` is the selector for `hide` replacing the two bytes responsible for enqueueing `hide` on the stack as the second selector to be executed. (The other is `init` which must still run.)
+
+We're not quite done...in the original code since the `stack` is setup to handle 2 selector calls this means that `send 0x08` should be `send 0x04` instead because the stack is effectively halved since the `hide` selector was not pushed and we need to make sure that the `send` command accounts for only *4 bytes* on the stack vs 8 bytes.
+
+```sh
+# lsl6 dos (non-hires) - (room 440)
+# ) disasm closeUpInset init bcc
+
+# Patch is applied to file: 440.SCR
+
+# Before
+0036:1a5e: 0x39, 0x6e,                          // pushi        6e              ; 110, 'n', init
+0036:1a60: 0x76,                                // push0
+0036:1a61: 0x39, 0x66,                          // pushi        66              ; 102, 'f', hide
+0036:1a63: 0x76,                                // push0
+0036:1a64: 0x72, 0xba, 0x04,                    // lofsa        tits[2c05]
+0036:1a67: 0x4a, 0x08,                          // send         08
+
+# After
+0036:1a5e: 0x39, 0x6e,                          // pushi        6e              ; 110, 'n', init
+0036:1a60: 0x76,                                // push0
+0036:1a61: 0x33, 0x01,                          // jmp          01              ; jump +1
+0036:1a63: 0x76,                                // push0                        ; <SKIPPED FROM JUMP>
+0036:1a64: 0x72, 0xba, 0x04,                    // lofsa        tits[2c05]
+0036:1a67: 0x4a, 0x04,                          // send         04              ; 4 instead of 8 since we're invoking one selector: (init) instead of two selectors: (init & hide).
+```
+
+
 
 ### Markdown
 
