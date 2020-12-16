@@ -1,8 +1,10 @@
 ## SCI Hacking
 
-You can use the [editor on GitHub](https://github.com/deckarep/sci-hacking/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+The purpose of this *small* blog is two-fold: First and foremost, this is an exercise in the study of a classic virtual machine implementation implemented by Sierra Online during the golden era of adventure gaming between the late 80s to mid 90s. Secondly this is to understand a little bit of computing history developed by a gaming company which was largely responsible for motivating me to one day enter the field of software development.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The company Sierra Online founded by Ken and Roberta Williams had the foresight to knowing that they wanted their games to run on as many relevant personal computing architectures during this revolution in gaming. Rather than write then re-write many of the their games to support each platform, Sierra invested heavily in a virtual machine architecture modeled after a 16-bit P-Machine. This computing model that they developed had its own micro-kernel for things like drawing routines, file IO, sound manipulation, etc. It also also had over 100 opcodes and was built on the concept of a stack-machine based VM. This VM also had support for strings, pointers, asset management and many *modern* things you'd find in an implementation today.
+
+On top of this VM architecture, Sierra built a full-blown programming language that was very much modeled after Scheme and Small-Talk. This language supported procedures, object-oriented concepts, local and global variables and was able to be fully compiled. It did not however support garbage-collection and required the programmers to implement their own resource cleanup to keep memory usage bounded.
 
 ### Resources
 
